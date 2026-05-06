@@ -1,0 +1,21 @@
+{
+  "name": "projet-groupe-jour4",
+  "version": "1.0.0",
+  "description": "Pipeline RAG de bout en bout — Jour 4 NodeJS IA",
+  "type": "module",
+  "scripts": {
+    "index": "node scripts/create-index.js",
+    "eval": "node scripts/run-eval.js",
+    "audit": "node scripts/retrieval-audit.js",
+    "compare": "node scripts/compare-pipelines.js",
+    "cli": "node cli.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/mistralai": "^0.1.0",
+    "@langchain/pinecone": "^0.1.0",
+    "@pinecone-database/pinecone": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "langchain": "^0.3.0"
+  }
+}

@@ -87,14 +87,18 @@ async function main() {
 
   let allChunks = [];
   for (const doc of docs) {
-    const rawChunks = chunkWithOverlap(doc.text, CONFIG.chunkSize, CONFIG.overlap);
-    const chunks = rawChunks.map((text, i) => ({
-      text,
-      filename: doc.filename,
-      chunkIndex: i,
-    }));
-    console.log(`  ${doc.filename} → ${chunks.length} chunks`);
-    allChunks = allChunks.concat(chunks);
+    try {
+      const rawChunks = chunkWithOverlap(doc.text, CONFIG.chunkSize, CONFIG.overlap);
+      const chunks = rawChunks.map((text, i) => ({
+        text,
+        filename: doc.filename,
+        chunkIndex: i,
+      }));
+      console.log(`  ${doc.filename} → ${chunks.length} chunks`);
+      allChunks = allChunks.concat(chunks);
+    } catch (err) {
+      console.error(`  ⚠ Erreur sur ${doc.filename} : ${err.message} — fichier ignoré`);
+    }
   }
 
   console.log(`\nTotal : ${allChunks.length} chunks créés`);

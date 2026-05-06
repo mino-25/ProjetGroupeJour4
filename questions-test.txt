@@ -1,18 +1,19 @@
 # Questions de référence - baseline évaluation RAG
+# Corpus : documentation Pydantic AI
 # Format : 6 happy paths + 2 ambiguës + 2 adversariales
 
 ## Happy paths (réponse clairement dans le corpus)
-1.
-2.
-3.
-4.
-5.
-6.
+1. Comment définir un outil (tool) dans Pydantic AI ?
+2. Quelle est la différence entre Agent et RunContext dans Pydantic AI ?
+3. Comment streamer une réponse avec un agent Pydantic AI ?
+4. Comment Pydantic AI gère-t-il la validation des données de sortie ?
+5. Comment configurer le modèle LLM utilisé par un Agent Pydantic AI ?
+6. Comment accéder au RunContext depuis l'intérieur d'un outil ?
 
 ## Ambiguës (plusieurs chunks pourraient répondre)
-7.
-8.
+7. Comment gérer les erreurs dans Pydantic AI ?
+8. Comment tester un agent Pydantic AI ?
 
 ## Adversariales (réponse PAS dans le corpus)
-9.
-10.
+9. Quel est le PIB de la France en 2023 ?
+10. Comment créer une API REST avec Express.js ?
