@@ -52,6 +52,10 @@ export async function ragQuery(question, options = { topK: CONFIG.topK, verbose:
     }, {})
   );
 
+  const citedIndices = [...answer.matchAll(/\[Source (\d+)\]/g)].map(m => parseInt(m[1]));
+  const validIndices = new Set(chunks.map((_, i) => i + 1));
+  const orphanCitations = [...new Set(citedIndices.filter(n => !validIndices.has(n)))];
+
   const metrics = {
     topScore: chunks[0]?.score ?? 0,
     avgScore: chunks.length
@@ -62,7 +66,8 @@ export async function ragQuery(question, options = { topK: CONFIG.topK, verbose:
     promptTokens,
     completionTokens,
     costUSD: parseFloat(costUSD.toFixed(6)),
+    orphanCitations,
   };
 
-  return { answer, sources, chunks, metrics };
+  return { answer, sources, chunks, metrics, chunksUsed: chunks.length };
 }
