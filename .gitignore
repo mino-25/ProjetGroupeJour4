@@ -1,0 +1,4 @@
+node_modules/
+.env
+corpus/
+package-lock.json
