@@ -1,0 +1,122 @@
+[
+  {
+    "index": 1,
+    "question": "Qu'est-ce que l'intelligence artificielle ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "L'intelligence artificielle (IA) est un domaine de l'informatique qui vise à créer des machines capables de simuler l'intelligence humaine. Elle englobe plusieurs sous-domaines comme l'apprentissage automatique, le traitement du langage naturel et la vision par ordinateur. [Source 1]",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 2,
+    "question": "Quels sont les avantages de Node.js ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Node.js est un environnement d'exécution JavaScript côté serveur basé sur le moteur V8 de Google Chrome. Il permet d'exécuter du JavaScript en dehors du navigateur web et utilise un modèle d'E/S non bloquant. [Source 3]",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 3,
+    "question": "Quel ordinateur a popularisé l'informatique personnelle ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 4,
+    "question": "Quels sont les langages back-end populaires pour le développement web ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 5,
+    "question": "Quelle est la complexité du tri rapide en moyenne ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 6,
+    "question": "Qu'est-ce qu'un arbre binaire de recherche ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 7,
+    "question": "Quels sont les défis de l'IA ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 8,
+    "question": "Comment optimiser les performances web ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 9,
+    "question": "Quelle est la capitale de la France ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  },
+  {
+    "index": 10,
+    "question": "Combien font 2 + 2 ?",
+    "topScore": "0.89",
+    "avgTop3": "0.84",
+    "tokens": "150/50",
+    "cost": "0.000020",
+    "latencyMs": 0,
+    "answer": "Je ne trouve pas cette information dans les documents fournis.",
+    "sources": "intelligence-artificielle.txt, nodejs-programmation.txt, histoire-informatique.txt, algorithmes-structures.txt",
+    "orphanCitations": "aucune"
+  }
+]

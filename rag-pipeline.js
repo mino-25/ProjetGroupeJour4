@@ -29,7 +29,20 @@ export async function ragQuery(question, options = {}) {
   }
 
   const t2 = Date.now();
-  const { answer, usage } = await generateCompletion(question, chunks);
+  let answer, usage;
+  try {
+    const result = await generateCompletion(question, chunks);
+    answer = result.answer;
+    usage = result.usage;
+  } catch (error) {
+    // Si la récupération a réussi mais pas la génération, afficher les sources disponibles
+    if (chunks.length > 0) {
+      answer = `Erreur lors de la génération de la réponse: ${error.message}\n\nSources trouvées (${chunks.length}) :\n${chunks.map((c, i) => `${i + 1}. ${c.source} (score: ${c.score.toFixed(2)})`).join('\n')}`;
+    } else {
+      answer = `Erreur: ${error.message}`;
+    }
+    usage = { prompt_tokens: 0, completion_tokens: 0 };
+  }
   const generationMs = Date.now() - t2;
 
   const promptTokens = usage?.prompt_tokens ?? 0;
@@ -53,7 +66,9 @@ export async function ragQuery(question, options = {}) {
     }, {})
   );
 
-  const citedIndices = [...answer.matchAll(/\[Source (\d+)\]/g)].map(m => parseInt(m[1], 10));
+  const citedIndices = answer && typeof answer === 'string'
+    ? [...answer.matchAll(/\[Source (\d+)\]/g)].map(m => parseInt(m[1], 10))
+    : [];
   const validIndices = new Set(chunks.map((_, i) => i + 1));
   const orphanCitations = [...new Set(citedIndices.filter(n => !validIndices.has(n)))];
 

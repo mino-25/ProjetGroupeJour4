@@ -2,17 +2,17 @@
 # Format : 6 happy paths + 2 ambiguës + 2 adversariales
 
 ## Happy paths (réponse clairement dans le corpus)
-1.
-2.
-3.
-4.
-5.
-6.
+1. Qu'est-ce que l'intelligence artificielle ?
+2. Quels sont les avantages de Node.js ?
+3. Quel ordinateur a popularisé l'informatique personnelle ?
+4. Quels sont les langages back-end populaires pour le développement web ?
+5. Quelle est la complexité du tri rapide en moyenne ?
+6. Qu'est-ce qu'un arbre binaire de recherche ?
 
 ## Ambiguës (plusieurs chunks pourraient répondre)
-7.
-8.
+7. Quels sont les défis de l'IA ?
+8. Comment optimiser les performances web ?
 
 ## Adversariales (réponse PAS dans le corpus)
-9.
-10.
+9. Quelle est la capitale de la France ?
+10. Combien font 2 + 2 ?
