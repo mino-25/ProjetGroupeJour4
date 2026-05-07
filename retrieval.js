@@ -20,7 +20,7 @@ async function embedText(text) {
   return data.data[0].embedding;
 }
 
-export async function retrieveContext(query, topK = CONFIG.topK) {
+export async function retrieveContext(query, topK = CONFIG.topK, threshold = CONFIG.scoreThreshold) {
   if (!query || query.trim().length === 0) {
     return [];
   }
@@ -34,12 +34,12 @@ export async function retrieveContext(query, topK = CONFIG.topK) {
     includeMetadata: true,
   });
 
-  return results.matches
-    .filter(match => match.score >= CONFIG.scoreThreshold)
+  return (results.matches || [])
+    .filter(match => match.score >= threshold)
     .map(match => ({
-      text: match.metadata.text,
-      source: match.metadata.source ?? 'Source inconnue',
+      text: match.metadata?.text ?? '',
+      source: match.metadata?.source ?? 'Source inconnue',
       score: match.score,
-      chunkIndex: match.metadata.chunkIndex,
+      chunkIndex: match.metadata?.chunkIndex,
     }));
 }

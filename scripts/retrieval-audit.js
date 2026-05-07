@@ -19,7 +19,11 @@ const VARIANTS = [
 async function runVariant(variant) {
   const rows = [];
   for (const question of questions) {
-    const result = await ragQuery(question, { topK: variant.topK, verbose: false });
+    const result = await ragQuery(question, {
+      topK: variant.topK,
+      threshold: variant.threshold,
+      verbose: false,
+    });
     rows.push({
       question: question.slice(0, 50),
       topScore: result.metrics.topScore.toFixed(2),
